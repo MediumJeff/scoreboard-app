@@ -4,10 +4,10 @@ import { Container, Row, Col, Button } from 'reactstrap';
 import './timer-styles.css';
 
 function Timer() {
-  const [time, setTime] = React.useState(70000);
-  const [timerOn, setTimerOn] = React.useState(false);
+  const [time, setTime] = useState(70000);
+  const [timerOn, setTimerOn] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     let interval = null;
 
     if (timerOn && time !== 0) {
@@ -30,7 +30,7 @@ function Timer() {
               <span className='m-1 clock'>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
             )}
             <span className='m-1 clock'>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
-            {time < 60000 && (
+            {time < 60001 && (
               <span className='m-1 clock'>.{("0" + (time / 10) % 100).slice(-2)}</span>
             )}
           </Col>
