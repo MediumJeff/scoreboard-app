@@ -26,7 +26,7 @@ function Timer() {
       <Container>
         <Row>
           <Col className='timer-display'>
-            {time > 60000 && (
+            {time > 60001 && (
               <span className='m-1 clock'>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
             )}
             <span className='m-1 clock'>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
@@ -42,9 +42,6 @@ function Timer() {
         )}
         {timerOn && (
           <Button className='btn btn-danger m-4' onClick={() => setTimerOn(false)}>Stop</Button>
-        )}
-        {!timerOn && time > 0 && (
-          <Button className='btn btn-primary m-4' onClick={() => setTimerOn(true)}>Resume</Button>
         )}
         {!timerOn && (
           <Button className='btn btn-danger m-4' onClick={() => setTime(70000)}>Reset</Button>
