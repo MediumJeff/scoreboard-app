@@ -6,3 +6,10 @@
     font-family: Share Tech Mono;
     position: flex;
 }
+
+.timer-display {
+    width: 25%;
+    margin: auto;
+    background-color: black;
+    color: white;
+}

@@ -1,5 +1,5 @@
-import React from 'react'
 import { useState } from 'react';
+import { Container, Row, Col ,Card, CardHeader, CardBody } from 'reactstrap';
 import './score-styles.css';
 
 
@@ -22,19 +22,29 @@ const TeamScore = () => {
 
     return (
         <>
-            <div>
-                <h2><input type='text' placeholder='Team Name'></input></h2>
-                <span className='score-display'>{total}</span>
-            </div>
-            <div>
-                <button className='score-button' value='1' onClick={addScore}>+1</button>
-                <button className='score-button' value='2' onClick={addScore}>+2</button>
-                <button className='score-button' value='3' onClick={addScore}>+3</button>
-            </div>
-            <div>
-                <button className='score-button' value='-1' onClick={addScore}>-1</button>
-                <button className='score-button' onClick={resetScore}>Reset</button>
-            </div>
+            <Container>
+                <Row className='score-display'>
+                    <Card className='mt-3'>
+                        <CardHeader>
+                        <h2><input type='text' placeholder="Team Name" className='text-center'></input></h2>
+                        </CardHeader>
+                        <CardBody>
+                        <span className='score-total'>{total}</span>
+                        </CardBody>
+                    </Card>
+                </Row>
+                <Row className='score-controls'>
+                    <div>
+                        <button className='score-button' value='1' onClick={addScore}>+1</button>
+                        <button className='score-button' value='2' onClick={addScore}>+2</button>
+                        <button className='score-button' value='3' onClick={addScore}>+3</button>
+                    </div>
+                    <div>
+                        <button className='score-button' value='-1' onClick={addScore}>-1</button>
+                        <button className='score-button' onClick={resetScore}>Reset</button>
+                    </div>
+                </Row>
+            </Container>
         </>
     )
 }

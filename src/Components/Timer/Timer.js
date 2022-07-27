@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col, Button, Card, CardBody } from 'reactstrap';
 import './timer-styles.css';
+
 
 function Timer() {
   const [time, setTime] = useState(70000);
@@ -20,12 +21,11 @@ function Timer() {
     return () => clearInterval(interval)
   })
 
-
   return (
     <>
       <Container>
         <Row>
-          <Col className='timer-display'>
+          <Card className='timer-display d-inline'>
             {time > 60001 && (
               <span className='m-1 clock'>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
             )}
@@ -33,7 +33,7 @@ function Timer() {
             {time < 60001 && (
               <span className='m-1 clock'>.{("0" + (time / 10) % 100).slice(-2)}</span>
             )}
-          </Col>
+          </Card>
         </Row>
       </Container>
       <div>

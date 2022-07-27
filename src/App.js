@@ -7,9 +7,12 @@ import TeamScore from './Components/Score/TeamScore';
 function App() {
   return (
     <div className="App">
-      <TeamScore />
+      <span md='6' className='d-inline-flex' >
+        <TeamScore />
+        <TeamScore />
+      </span>
       <Timer />
-      <TeamScore />
+      
     </div>
   );
 }

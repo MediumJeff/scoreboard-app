@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+
 .score-display {
-    font-size: 48px
+    font-size: 60px;
+    font-family: Coda, sans-serif;
 }
 
 .score-button {
