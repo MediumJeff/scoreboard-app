@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Button, Card } from 'reactstrap';
+import { Container, Row, Button, Card, CardHeader, CardBody } from 'reactstrap';
 import './timer-styles.css';
 import Horn from '../../resources/buzzer-horn.wav';
 import ReactAudioPlayer from 'react-audio-player';
@@ -34,20 +34,23 @@ function Timer() {
     <>
       <Container>
         <Row>
-          <Card className='timer-display d-inline'>
-            {time > 60001 && (
-              <span className='m-1 clock'>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-            )}
-            <span className='m-1 clock'>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
-            {time < 60001 && (
-              <span className='m-1 clock'>.{("0" + (time / 10) % 100).slice(-2)}</span>
-            )}
-            {time <= 100 && (
-              <ReactAudioPlayer
-                src={Horn}
-                autoPlay
+          <Card className='clock'>
+            <CardHeader className='time-heading'>Time Remaining</CardHeader>
+            <CardBody className='timer-display d-inline'>
+              {time > 60001 && (
+                <span className='m-1 clock'>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+              )}
+              <span className='m-1 clock'>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
+              {time < 60001 && (
+                <span className='m-1 clock'>.{("0" + (time / 10) % 100).slice(-2)}</span>
+              )}
+              {time <= 100 && (
+                <ReactAudioPlayer
+                  src={Horn}
+                  autoPlay
                 />
-            )}
+              )}
+            </CardBody>
           </Card>
         </Row>
       </Container>

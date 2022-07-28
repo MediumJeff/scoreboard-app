@@ -1,13 +1,13 @@
+import React from 'react';
 import { useState } from 'react';
 import { Container, Row ,Card, CardHeader, CardBody } from 'reactstrap';
 import './score-styles.css';
+import '../../App';
 
-
-const TeamScore = () => {
+const TeamScore = (props) => {
     const [score, setScore] = useState(0);
     const [points, setPoints] = useState(0);
     let total = score + points;
-
 
     function addScore(e) {
         setPoints(Number(e.target.value))
@@ -26,7 +26,7 @@ const TeamScore = () => {
                 <Row className='score-display'>
                     <Card className='mt-3'>
                         <CardHeader>
-                        <h2><input type='text' placeholder="Team Name" className='text-center'></input></h2>
+                        <h2 className='text-center'>{props.teamName}</h2>
                         </CardHeader>
                         <CardBody>
                         <span className='score-total'>{total}</span>

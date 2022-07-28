@@ -7,14 +7,12 @@ import Period from './Components/Period/Period';
 function App() {
   return (
     <div className="App">
-      <span md='6' className='d-inline-flex' >
-        <TeamScore />
-        <TeamScore />
+      <span className='d-inline-flex' >
+        <TeamScore teamName='Tigers' />
+        <TeamScore teamName='Guardians' />
       </span>
-      <span>
         <Timer />
         <Period />
-      </span>
     </div>
   );
 }
