@@ -42,7 +42,7 @@ function Timer() {
             {time < 60001 && (
               <span className='m-1 clock'>.{("0" + (time / 10) % 100).slice(-2)}</span>
             )}
-            {time == 0 && (
+            {time <= 100 && (
               <ReactAudioPlayer
                 src={Horn}
                 autoPlay/>
@@ -58,7 +58,7 @@ function Timer() {
           <Button className='btn btn-danger m-4' onClick={() => setTimerOn(false)}>Stop</Button>
         )}
         {!timerOn && (
-          <Button className='btn btn-danger m-4' onClick={() => setTime(3000)}>Reset</Button>
+          <Button className='btn btn-danger m-4' onClick={() => setTime(70000)}>Reset</Button>
         )}
         {!timerOn && (
           <>
