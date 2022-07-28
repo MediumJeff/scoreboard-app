@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Timer from './Components/Timer/Timer';
 import TeamScore from './Components/Score/TeamScore';
+import Period from './Components/Period/Period';
 
 
 function App() {
@@ -11,8 +12,10 @@ function App() {
         <TeamScore />
         <TeamScore />
       </span>
-      <Timer />
-      
+      <span>
+        <Timer />
+        <Period />
+      </span>
     </div>
   );
 }

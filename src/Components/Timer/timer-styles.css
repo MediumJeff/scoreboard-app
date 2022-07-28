@@ -2,13 +2,13 @@
 
 .clock {
     padding: 4px;
-    font-size: 72px;
+    font-size: 100px;
     font-family: Share Tech Mono;
     position: flex;
 }
 
 .timer-display {
-    width: 25%;
+    width: auto;
     margin: auto;
     background-color: black;
     color: white;
