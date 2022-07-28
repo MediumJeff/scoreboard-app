@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Timer from './Components/Timer/Timer';
 import TeamScore from './Components/Score/TeamScore';

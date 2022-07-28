@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Row, Col ,Card, CardHeader, CardBody } from 'reactstrap';
+import { Container, Row ,Card, CardHeader, CardBody } from 'reactstrap';
 import './score-styles.css';
 
 

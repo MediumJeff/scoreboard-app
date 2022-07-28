@@ -45,7 +45,8 @@ function Timer() {
             {time <= 100 && (
               <ReactAudioPlayer
                 src={Horn}
-                autoPlay/>
+                autoPlay
+                />
             )}
           </Card>
         </Row>
