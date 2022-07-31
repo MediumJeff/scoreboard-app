@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Button, Card, CardHeader, CardBody } from 'reactstrap';
 import './timer-styles.css';
