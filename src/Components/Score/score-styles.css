@@ -5,6 +5,9 @@
     font-family: Coda, sans-serif;
 }
 
+.team-name {
+    width: 500px;
+}
 .score-button {
     padding: 5px;
     margin: 5px;

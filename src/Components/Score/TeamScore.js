@@ -1,6 +1,5 @@
-import React from 'react';
 import { useState } from 'react';
-import { Container, Row ,Card, CardHeader, CardBody } from 'reactstrap';
+import { Container, Row, Card, CardHeader, CardBody } from 'reactstrap';
 import './score-styles.css';
 import '../../App';
 
@@ -26,10 +25,10 @@ const TeamScore = (props) => {
                 <Row className='score-display'>
                     <Card className='mt-3'>
                         <CardHeader>
-                        <h2 className='text-center'>{props.teamName}</h2>
+                            <h2 className='team-name text-center'>{props.teamName}</h2>
                         </CardHeader>
                         <CardBody>
-                        <span className='score-total'>{total}</span>
+                            <span className='score-total'>{total}</span>
                         </CardBody>
                     </Card>
                 </Row>

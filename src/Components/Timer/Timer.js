@@ -7,7 +7,7 @@ import ReactAudioPlayer from 'react-audio-player';
 
 
 function Timer() {
-  const [time, setTime] = useState(70000);
+  const [time, setTime] = useState(5000);
   const [timerOn, setTimerOn] = useState(false);
   const audioPlayer = useRef(null);
 
@@ -54,7 +54,7 @@ function Timer() {
           </Card>
         </Row>
       </Container>
-      <div>
+      <div className='clock-controls'>
         {!timerOn && (
           <Button className='btn btn-success m-4' onClick={() => setTimerOn(true)}>Start</Button>
         )}
@@ -62,7 +62,7 @@ function Timer() {
           <Button className='btn btn-danger m-4' onClick={() => setTimerOn(false)}>Stop</Button>
         )}
         {!timerOn && (
-          <Button className='btn btn-danger m-4' onClick={() => setTime(70000)}>Reset</Button>
+          <Button className='btn btn-danger m-4' onClick={() => setTime(5000)}>Reset</Button>
         )}
         {!timerOn && (
           <>

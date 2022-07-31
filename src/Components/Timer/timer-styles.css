@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 .clock {
-    padding: 4px;
     font-size: 76px;
-    font-family: Share Tech Mono;
     position: flex;
     width: auto;
-    margin: auto;
+    margin: 10px auto;
 }
 
 .time-heading {
@@ -19,4 +17,5 @@
     margin-top: 20px;
     background-color: black;
     color: white;
+    font-family: Share Tech Mono;
 }
