@@ -18,7 +18,6 @@ const TeamScore = (props) => {
         setPoints(0)
     }
 
-
     return (
         <>
             <Container>

@@ -6,8 +6,8 @@ import Horn from '../../resources/buzzer-horn.wav';
 import ReactAudioPlayer from 'react-audio-player';
 
 
-function Timer() {
-  const [time, setTime] = useState(5000);
+function Timer(props) {
+  const [time, setTime] = useState(parseInt(props.timeSet));
   const [timerOn, setTimerOn] = useState(false);
   const audioPlayer = useRef(null);
 
@@ -62,7 +62,7 @@ function Timer() {
           <Button className='btn btn-danger m-4' onClick={() => setTimerOn(false)}>Stop</Button>
         )}
         {!timerOn && (
-          <Button className='btn btn-danger m-4' onClick={() => setTime(5000)}>Reset</Button>
+          <Button className='btn btn-danger m-4' onClick={() => setTime(props.timeSet)}>Reset</Button>
         )}
         {!timerOn && (
           <>

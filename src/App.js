@@ -11,7 +11,7 @@ function App() {
             <TeamScore teamName='Tigers' />
             <TeamScore teamName='Guardians' />
           </span>
-          <Timer />
+          <Timer timeSet='70000' />
           <Period />
       </div>
     </>
