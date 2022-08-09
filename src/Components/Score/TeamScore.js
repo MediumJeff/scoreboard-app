@@ -47,4 +47,4 @@ const TeamScore = (props) => {
     )
 }
 
-export default TeamScore;
+export default TeamScore
