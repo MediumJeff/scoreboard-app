@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
 
-.score-display {
-    font-size: 60px;
-    font-family: Coda, sans-serif;
+.score-total {
+    font-size: 60px;;
 }
 
 .team-name {
+    font-size: 60px;
     width: 500px;
+    font-family: Coda, sans-serif;
 }
 .score-button {
     padding: 5px;
     margin: 5px;
+}
+
+.time-outs {
+    font-size: 24px;;
 }

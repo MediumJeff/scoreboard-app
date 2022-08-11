@@ -1,8 +1,9 @@
 import './App.css';
-import Timer from './Components/Timer/Timer';
-import TeamScore from './Components/Score/TeamScore';
-import Period from './Components/Period/Period';
+import Timer from './components/Timer/Timer';
+import TeamScore from './components/Score/TeamScore';
+import Period from './components/Period/Period';
 import { GAME_DETAILS } from './data/GAME_DETAILS';
+import MenuCard from './pages/MenuCard';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Timer timeSet={(GAME_DETAILS.minutesPerPeriod * 60000)} />
           <Period />
       </div>
+      <MenuCard />
     </>
   );
 }
