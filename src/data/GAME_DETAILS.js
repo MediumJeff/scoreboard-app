@@ -1,7 +1,7 @@
 export const GAME_DETAILS = 
     {
-    homeTeam: 'Tigers',
-    awayTeam: 'Guardians',
-    minutesPerPeriod: 8,
+    homeTeam: 'Home',
+    awayTeam: 'Guest',
+    minutesPerPeriod: 1.1,
     timeOuts: 3
     }
